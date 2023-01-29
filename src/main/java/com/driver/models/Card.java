@@ -32,6 +32,13 @@ public class Card {
     @JsonIgnoreProperties("card")
     private List<Book> books;
 
+    public Card(Student student, Date createdOn, Date updatedOn, CardStatus cardStatus) {
+        this.student = student;
+        this.createdOn = createdOn;
+        this.updatedOn = updatedOn;
+        this.cardStatus = cardStatus;
+    }
+
     public Card(){
         this.cardStatus = CardStatus.ACTIVATED;
     }
