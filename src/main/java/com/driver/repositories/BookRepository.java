@@ -10,9 +10,13 @@ import java.util.List;
 
 public interface BookRepository extends JpaRepository<Book, Integer> {
 
-
+    //JPA syntax for custom query
     @Query("select b from Book b where b.available =:availability and b.author in (select a from Author a where a.name =:author_name)")
     List<Book> findBooksByAuthor(String author_name, boolean availability);
+
+    //native query
+    @Query(value = "select * from Book where genre = :genre1",nativeQuery = true)
+    List<Book> findAllBooksByGenre(String genre1);
 
     @Query("select b from Book b where b.genre =:genre and b.available =:available")
     List<Book> findBooksByGenre(String genre, boolean available);

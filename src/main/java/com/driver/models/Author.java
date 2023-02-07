@@ -19,7 +19,7 @@ public class Author {
     private int age;
     private String country;
 
-    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @JsonIgnoreProperties("author")
     private List<Book> booksWritten;
 
