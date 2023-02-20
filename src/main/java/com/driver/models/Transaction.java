@@ -1,5 +1,6 @@
 package com.driver.models;
 
+import com.driver.enums.TransactionStatus;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.CreationTimestamp;
 

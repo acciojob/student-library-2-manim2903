@@ -1,5 +1,6 @@
 package com.driver.models;
 
+import com.driver.enums.CardStatus;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;

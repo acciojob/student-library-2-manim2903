@@ -1,4 +1,4 @@
-package com.driver.models;
+package com.driver.enums;
 
 public enum CardStatus {
     ACTIVATED,
